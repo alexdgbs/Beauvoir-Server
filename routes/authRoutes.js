@@ -81,7 +81,7 @@ router.post('/forgot-password', async (req, res) => {
       },
     });
 
-    const resetUrl = `http://localhost:5173/reset-password/${resetToken}`;
+    const resetUrl = `https://beauvoir.vercel.app/reset-password/${resetToken}`;
     
     const mailOptions = {
       to: email,
