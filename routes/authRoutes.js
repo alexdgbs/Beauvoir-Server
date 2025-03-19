@@ -56,7 +56,9 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ message: 'Error en el servidor', error: error.message });
   }
 });
-
+router.get('/health', (req, res) => {
+  res.status(200).send('Servidor funcionando correctamente');
+});
 router.post('/forgot-password', async (req, res) => {
   const { email } = req.body;
 
